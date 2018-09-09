@@ -2,7 +2,7 @@
      <v-footer
         dark
         height="auto"
-        fixed
+        id = "footer"
       >
         <v-card
           flat
@@ -33,7 +33,7 @@
           <v-card-text class="white--text pt-0">
              eiusmod tempor incididunt ut labore et dolore magna aliqua.
           </v-card-text>
-          <v-btn color="info">LIST YOUR CAR</v-btn>
+          <v-btn color="info" class="btn">LIST YOUR CAR</v-btn>
           <v-divider></v-divider>
           <v-card-text class="bottom">
             &copy;2018 — <strong>Vuetify</strong>
@@ -55,7 +55,7 @@ export default {
   }
 </script>
 <style>
-.indigo.lighten-1 {
+#footer > .indigo.lighten-1 {
   background-color: #F69721!important;
   padding-top:45px;
   width: 100%;
@@ -70,7 +70,7 @@ export default {
 .special {
   margin-top: 20px;
 }
-.indigo.lighten-1 .v-btn {
+.indigo.lighten-1 .btn {
   margin:0px;
   margin-top:38px;
   margin-bottom:55px;

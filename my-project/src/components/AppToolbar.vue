@@ -1,5 +1,5 @@
 <template>
-    <v-toolbar>
+    <v-toolbar id="toolbar">
           <v-toolbar-title>
             <img src="../assets/logo.jpg" alt="">
           </v-toolbar-title>
@@ -18,7 +18,7 @@
       </v-toolbar>
 </template>
 <style>
-.v-toolbar {
+#toolbar {
     box-shadow: none;
   }
   .v-toolbar > .v-toolbar__content {
