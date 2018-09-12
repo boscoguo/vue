@@ -9,7 +9,7 @@
           tile
           class="indigo lighten-1 white--text text-xs-center"
         >
-        <img src="../assets/bottom.jpg">
+        <img src="../assets/location.png" style="width:57px; height:70pxs">
           <!-- <v-card-text>
             <v-btn
               v-for="icon in icons"

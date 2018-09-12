@@ -1,21 +1,26 @@
 <template>
-    <v-toolbar id="toolbar">
+  <!-- <v-container> -->
+      <v-toolbar id="toolbar">
           <v-toolbar-title>
-            <img src="../assets/logo.jpg" alt="">
+            <img src="../assets/logo (2).png" alt="">
           </v-toolbar-title>
           
           <v-toolbar-items class="hidden-sm-and-down">
-            <v-btn flat>FIND A CAR</v-btn>
-            <v-btn flat>JOIN YOUR CAR</v-btn>
-            <v-btn flat>SUPPORT</v-btn>
-            <v-btn flat>CONTACT</v-btn>
+            <v-btn flat class="aver">FIND A CAR</v-btn>
+            <v-btn flat class="aver">JOIN YOUR CAR</v-btn>
+            <v-btn flat class="aver">SUPPORT</v-btn>
+            <v-btn flat class="aver">CONTACT</v-btn>
+            <v-btn flat class="login">LOG IN</v-btn>
+            <v-btn flat class="join">JOIN</v-btn>
           </v-toolbar-items>
-          <v-btn color="info">LOG IN</v-btn>
+          <!-- <v-btn color="info">LOG IN</v-btn>
               <v-overflow-btn 
                 label="JOIN"
                 target="#dropdown-example"
-              ></v-overflow-btn>
+              ></v-overflow-btn> -->
       </v-toolbar>
+  <!-- </v-container> -->
+    
 </template>
 <style>
 #toolbar {
@@ -39,7 +44,7 @@
 
   /* } */
   .theme--light.v-btn:not(.v-btn--icon):not(.v-btn--flat) {
-    background-color: #f29827;
+    background-color: #fff;
   }
   .v-input {
     flex: 0;
@@ -65,11 +70,40 @@
   .v-toolbar .v-select > .v-input__control > .v-input__slot {
     margin-top: 7px;
   }
+  #toolbar .login {
+    margin-left:182px;
+    margin-right:7px;
+  }
 
-  .v-input > .v-input__control > .v-input__slot > .v-select__slot {
+  #toolbar .aver {
+    margin-right:30px;
+  }
+
+  #toolbar .join {
+    padding:0px;
+  }
+
+  #toolbar .login .v-btn__content {
+    background-color:#f29827;
+    padding:8px 12px;
+    border-radius:5px;
+  }
+
+  #toolbar .join .v-btn__content {
+    background-color:#fff;
+    padding:8px 12px;
+    border:1px solid black;
+    border-radius:5px;
+  }
+
+  .theme--light.v-btn:not(.v-btn--icon):not(.v-btn--flat) {
+   background-color:none;
+  }
+  /* .v-input > .v-input__control > .v-input__slot > .v-select__slot {
     border: 1px solid #eee;
     border-radius: 5px;
-  }
+  } */
+ 
 </style>
 
 

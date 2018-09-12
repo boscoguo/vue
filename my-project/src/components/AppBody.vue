@@ -1,8 +1,9 @@
 <template>
-   <v-card id = "body">
-       <!-- <button @click="show">click</button> -->
+ <!-- <v-container> -->
+   <v-card id ="body">
+       
        <v-layout>
-           <v-flex xs12 sm8>
+           <v-flex xs12 sm6>
                <v-card
                     flat
                     tile
@@ -124,33 +125,53 @@
                         <!-- </v-layout> -->
                 </v-card>
            </v-flex>
-            <v-flex  class="car-box">
-                   <img src="../assets/car-bg.jpg" style="width:359px; height:578px;display:block">
-                <!-- <transition enter-active-class="animated bounceInLeft">                 -->
-                   <img src="../assets/car2.jpg" style="width:245px; height:94px" class="car" v-show='isShow'>                 
-                <!-- </transition> -->
+            <v-flex xs12 sm6  class="car-box">
+                   <img src="../assets/road.png" class="road" style="width:430px; height:492pxss">
+                   <button @click="show" class="btn">
+                       <img src="../assets/btn.png"  style = "width:100px; height:100px">
+                   </button>
+                   
+                <transition enter-active-class="animated bounceInLeft">                
+                   <img src="../assets/car.png"  class="car" v-show='isShow'>                 
+                </transition>
             </v-flex>
        </v-layout>
         <v-layout class="part-two">
-            <v-flex xs12 sm4>
+            <v-flex xs12 sm6 class="left">
                 <img src="../assets/pic.jpg" style="width:256px;height:416px">
             </v-flex>
-            <v-flex xs12 sm4>
+            <v-flex xs12 sm5 class="center">
                 <v-card class="shop">
                     <v-card-text class="word-top">Tap and</v-card-text>
-                    <span class="word-go">Go</span>
-                    <a href="#">
-                        <img src="../assets/google.jpg" alt="">
-                    </a>
+                    <v-layout>
+                        <v-flex>
+                            <span class="word-go">Go</span>
+                        </v-flex>
+                        <v-flex class="store-btn">
+                            <a href="#" class="google-wrap">
+                                <img src="../assets/google.png" style= "width:132px;height:44px">
+                            </a>
+                            <v-card-text class="apple-wrap">
+                                <a href="#">
+                                    <img src="../assets/apple.png" style= "width:132px;height:44px">
+                                </a>
+                            </v-card-text>
+                            <v-card-text class="any-wrap">
+                                Any time,Any where
+                            </v-card-text>
+                        </v-flex>
+                    </v-layout>
                     
-                    <v-card-text class="apple-wrap">
+                    
+                    
+                    <!-- <v-card-text class="apple-wrap">
                         <a href="#">
-                            <img src="../assets/apple.jpg" alt="">
+                            <img src="../assets/apple.png" style= "width:132px;height:44px">
                         </a>
                     </v-card-text>
                     <v-card-text class="any-wrap">
                         Any time,Any where
-                    </v-card-text>
+                    </v-card-text> -->
                 </v-card>
                 <v-card class="bottom-word">
                     <v-card-text class="v-card-text">Lorem ipsum dolor sit amet,consectetur adipiscing elit, sed do</v-card-text>
@@ -160,89 +181,121 @@
                 </v-card>
             </v-flex>
             <v-flex xs12 sm4 class="phone">
-                <img src="../assets/x-bg.jpg" alt="">
+                <img src="../assets/mobile.png" style="width:350px;height:460px">
             </v-flex>
         </v-layout> 
-   </v-card>    
+   </v-card>  
+  <!-- </v-container> -->
 </template>
 <script>
-import AppDate from './AppDate.vue'
-import 'animate.css/animate.css'
+import AppDate from "./AppDate.vue";
+import "animate.css/animate.css";
 export default {
-  components:{AppDate},
+  components: { AppDate },
   data: function() {
-     return {isShow:true} 
+    return { isShow: false };
   },
   methods: {
-    show:function() {
-        this.isShow = true
+    show: function() {
+      this.isShow = true;
     }
   }
 };
 </script>
 <style>
 #body {
+  width: 100%;
+  height: 100%;
+  background-color: pink;
   box-shadow: none;
+  background: url(../assets/whole1.jpg) no-repeat;
+  background-size: cover;
 }
-#body  .indigo.lighten-1 {
+#body .indigo.lighten-1 {
   background-color: #fff !important;
   padding-left: 100px;
 }
-#body  .indigo > .white--text {
+#body .indigo > .white--text {
   color: black !important;
   margin-bottom: 15px;
   font-weight: bold;
   font-size: 24px;
 }
-#body  .indigo.lighten-1 > .text-top {
+#body .indigo.lighten-1 > .text-top {
   margin-top: 114px;
 }
-#body  .indigo > .white--text > .bee-color {
+#body .indigo > .white--text > .bee-color {
   color: #f69721;
 }
 .car-box {
-    position:relative;
-    margin-left:316px;
+  position: relative;
+  margin-left: 316px;
+}
+#body .car-box > .road {
+  position:absolute;
+  top:19px;
+  left:163px;
+  opacity:.3;
+}
+#body .car-box > .btn {
+  position:absolute;
+  top:235px;
+  left:361px;
 }
 .car-box > .car {
-    position:absolute;
-    bottom:85px;
-    left:-47px;
+  width: 375px;
+  height: 220px;
+  position: absolute;
+  bottom: -207px;
+  left: 60px;
+}
+#body .part-two {
+    margin-top:265px;
+}
+#body .part-two > .left {
+    padding-top:76px;
+}
+#body .part-two > .center {
+    padding-top:76px;
 }
 #body .part-two .word-top {
-    padding-top:0px;
-    font-size: 22px;
-    font-weight:bold;
+  padding-top: 0px;
+  font-size: 40px;
+  font-weight: bold;
 }
 #body .part-two .word-go {
-    color:#f69721;
-    font-size: 40px;
-    font-weight:bold;
+  color: #f69721;
+  font-size: 65px;
+  font-weight: bold;
 }
-#body .part-two .shop  {
-    box-shadow: none;
-    margin-left:0px;
+#body .part-two .shop {
+  box-shadow: none;
+  margin-left: 0px;
 }
-#body .part-two .shop > .apple-wrap {
-    padding-top:0px;
-    padding-left:60px;
-} 
+#body .part-two .shop .store-btn {
+    padding-top: 19px;
+}
+#body .part-two .shop .google-wrap {
+  padding-left: 50px;
+}
+#body .part-two .shop .apple-wrap {
+  padding-top: 10px;
+  padding-left: 50px;
+}
 
-#body .part-two .shop > .any-wrap {
-    padding-top:18px;
-    padding-left:60px;
-    font-size:18px;
-    font-weight:bold;
-}
-#body .part-two > .phone > img {
-    margin-left:97px;
+#body .part-two .shop .any-wrap {
+  padding-top: 18px;
+  padding-left: 50px;
+  font-size: 15px;
+  font-weight: bold;
 }
 #body .part-two .bottom-word {
-    box-shadow: none;  
-    margin-top:30px; 
-} 
+  box-shadow: none;
+  margin-top: 30px;
+  opacity:.3;
+}
 #body .part-two .bottom-word > .v-card-text {
-    padding-top:5px;
+  padding-top: 5px;
 }
 </style>
 
