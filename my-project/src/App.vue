@@ -1,10 +1,20 @@
 <template>
-  <div>
+  <!-- <v-app>
     <app-toolbar></app-toolbar>
     <app-body></app-body>
     <app-footer></app-footer>     
-  </div>
-    
+  </v-app> -->
+  <v-container  text-xs-center>
+    <v-layout row wrap>
+      <v-flex xs12>
+        <app-toolbar></app-toolbar>
+      </v-flex>
+       <app-body></app-body>
+      <v-flex xs12>
+        <app-footer></app-footer>
+      </v-flex>
+    </v-layout>
+  </v-container>
     
 </template>
 

@@ -1,5 +1,6 @@
 <template>
-     <v-footer
+  <!-- <v-container> -->
+    <v-footer
         dark
         height="auto"
         id = "footer"
@@ -34,12 +35,15 @@
              eiusmod tempor incididunt ut labore et dolore magna aliqua.
           </v-card-text>
           <v-btn color="info" class="btn">LIST YOUR CAR</v-btn>
+          <!-- <button class="btn">LIST YOUR CAR</button> -->
           <v-divider></v-divider>
           <v-card-text class="bottom">
             &copy;2018 — <strong>Vuetify</strong>
           </v-card-text>
         </v-card>
     </v-footer>
+  <!-- </v-container> -->
+     
 </template>
 <script>
 export default {
@@ -55,6 +59,9 @@ export default {
   }
 </script>
 <style>
+#footer {
+  margin-top:425px;
+}
 #footer > .indigo.lighten-1 {
   background-color: #F69721!important;
   padding-top:45px;
@@ -75,7 +82,7 @@ export default {
   margin-top:38px;
   margin-bottom:55px;
   height:26px;
-  width: 100px;
+  width: 150px;
   background-color: #B8DD59!important; 
   border-radius:4px;
 }
