@@ -282,172 +282,172 @@
 </v-content> -->
 </template>
 <script>
-import AppDate from "./AppDate.vue";
-import "animate.css/animate.css";
+import AppDate from './AppDate.vue'
+import 'animate.css/animate.css'
 export default {
-  components: { AppDate },
-  data: function() {
-    return { isShow: false };
-  },
- 
-  methods: {
-    show: function() {
-    //   this.isShow = !this.isShow;
-        this.isShow = true;
+    components: { AppDate },
+    data: function() {
+        return { isShow: false }
+    },
+
+    methods: {
+        show: function() {
+            this.isShow = !this.isShow
+            // this.isShow = true
+        }
     }
-  }
-};
+}
 </script>
 <style>
 /* p {
     width:100px;
     height:100px;
 }*/
-.move-enter-active,.move-leave-active {
-    transition:1s all ease;
+.move-enter-active,
+.move-leave-active {
+    transition: 1s all ease;
 }
 /* .car {
     transform:tanslate(-300px);
 } */
 .move-enter {
     opacity: 0;
-    transform:tanslate(0px);
+    transform: translate(0px);
 }
 .move-enter-to {
-    opacity:1;
-    transform:translate(-1000px);
+    opacity: 1;
+    transform: translate(-1000px);
 }
 .move-leave {
-    opacity:1;
-    transform:translate(-1000px);
+    opacity: 1;
+    transform: translate(-1000px);
 }
 .move-leave-to {
-    opacity:1;
-    transform:translate(0px);
+    opacity: 0;
+    transform: translate(-1000px);
 }
 /* @media screen {
     
 } */
 #body {
-  /* margin-top:100px; */
-  width: 100%;
-  height: 100%;
-  /* background-color: pink; */
-  box-shadow: none;
-  background: url(../assets/body-bg.jpg) no-repeat 180px 0px;
-  background-size: cover;
+    /* margin-top:100px; */
+    width: 100%;
+    height: 100%;
+    /* background-color: pink; */
+    box-shadow: none;
+    background: url(../assets/body-bg.jpg) no-repeat 180px 0px;
+    background-size: cover;
 }
-#body .car-box  .road {
-    width: 75%;  
-    opacity:.5;
+#body .car-box .road {
+    width: 75%;
+    opacity: 0.5;
 }
 /* #body .indigo.lighten-1 {
   background-color: #fff !important;
   padding-left: 100px;
 } */
 #body .body-left {
-  padding-left: 100px;
+    padding-left: 100px;
 }
 #body .body-left > .white--text {
-  color: black !important;
-  margin-bottom: 10px;
-  font-weight: bold;
-  font-size: 24px;
+    color: black !important;
+    margin-bottom: 10px;
+    font-weight: bold;
+    font-size: 24px;
 }
 /* #body .indigo.lighten-1 > .text-top {
   margin-top: 114px;
 } */
 #body .body-left > .text-top {
-    margin-top:114px;
+    margin-top: 114px;
 }
 /* #body .indigo > .white--text > .bee-color {
   color: #f69721;
 } */
 #body .body-left > .white--text > .bee-color {
-    color:#f69721;
+    color: #f69721;
 }
 #body .car-box {
-  position: relative;
-  /* margin-left: 316px; */
+    position: relative;
+    /* margin-left: 316px; */
 }
 
 #body .car-box > .mask {
-  /* position:absolute; */
-  margin-top:15px;
-  /* left:70px; */
-  width:100%;
-  height:750px;
-  /* background-color:#ccc; */
-  /* opacity:.5; */
-  background:url(../assets/bubble.png) no-repeat 145px -5px;
-  /* overflow: hidden; */
-  /* border-top-left-radius:20em; */
+    /* position:absolute; */
+    margin-top: 15px;
+    /* left:70px; */
+    width: 100%;
+    height: 750px;
+    /* background-color:#ccc; */
+    /* opacity:.5; */
+    background: url(../assets/bubble.png) no-repeat 145px -5px;
+    /* overflow: hidden; */
+    /* border-top-left-radius:20em; */
 }
 #body .car-box .btn {
-  width:100px;
-  position: absolute;
-  top:205px;
-  right:44px;
+    width: 100px;
+    position: absolute;
+    top: 50%;
+    right: 10vw;
 }
 #body .car-box .car {
-  width: 308px;
-  height: 219px;
-  position: absolute;
-  bottom:-260px;
-  left:129px;
+    width: 308px;
+    height: 219px;
+    position: absolute;
+    bottom: -260px;
+    left: 129px;
 }
 #body .part-two {
-    margin-top:155px;
-   
+    margin-top: 155px;
 }
 #body .part-two > .left {
-    padding-top:76px;
-    background:url(../assets/pic1-01.png) no-repeat -65px 0px;
+    padding-top: 76px;
+    background: url(../assets/pic1-01.png) no-repeat -65px 0px;
 }
 #body .part-two > .center {
-    padding-top:76px;
+    padding-top: 76px;
     /* background:url(../assets/whole.png) no-repeat -2000px 144px; */
 }
 #body .part-two .word-top {
-  padding-top: 0px;
-  font-size: 40px;
-  font-weight: bold;
+    padding-top: 0px;
+    font-size: 40px;
+    font-weight: bold;
 }
 #body .part-two .word-go {
-  color: #f69721;
-  font-size: 65px;
-  font-weight: bold;
+    color: #f69721;
+    font-size: 65px;
+    font-weight: bold;
 }
 #body .part-two .shop {
-  box-shadow: none;
-  margin-left: 0px;
+    box-shadow: none;
+    margin-left: 0px;
+}
+.shop {
+    background-color: transparent !important;
 }
 #body .part-two .shop .store-btn {
     padding-top: 19px;
 }
 #body .part-two .shop .google-wrap {
-  padding-left: 50px;
+    padding-left: 50px;
 }
 #body .part-two .shop .apple-wrap {
-  padding-top: 10px;
-  padding-left: 50px;
+    padding-top: 10px;
+    padding-left: 50px;
 }
 
 #body .part-two .shop .any-wrap {
-  padding-top: 18px;
-  padding-left: 50px;
-  font-size: 15px;
-  font-weight: bold;
+    padding-top: 18px;
+    padding-left: 50px;
+    font-size: 15px;
+    font-weight: bold;
 }
 #body .part-two .bottom-word {
-  box-shadow: none;
-  margin-top: 30px;
-  opacity:.3;
+    box-shadow: none;
+    margin-top: 30px;
+    opacity: 0.3;
 }
 #body .part-two .bottom-word > .v-card-text {
-  padding-top: 5px;
+    padding-top: 5px;
 }
-
 </style>
-
-
