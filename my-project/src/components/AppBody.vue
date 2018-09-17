@@ -2,11 +2,12 @@
         <v-flex xs12 id="body">
                 <v-layout>
                     <v-flex xs12 xm6 text-xs-left>
-                        <v-card
+                        <!-- <v-card
                             flat
                             tile
                             class="indigo lighten-1 white--text "
-                            >
+                            > -->
+                        <div class="body-left">
                                 <v-card-text class="white--text pt-0 text-top">
                                     Easy rent a car
                                 </v-card-text>
@@ -17,19 +18,31 @@
                                     We are <span class="bee-color">Bee</span>here
                                 </v-card-text> 
                                 <app-date></app-date>
-                        </v-card>        
-                    </v-flex>
-                    <v-flex xs12 xm6 class="car-box"  text-xs-right text-sm-right>                       
-                        <div class="mask">
-                            <img src="../assets/road2.png" class="road">
                         </div>
-                        <img src="../assets/btn.png" class="btn">
-                        <img src="../assets/car.png" class="car">
+                                
+                        <!-- </v-card>         -->
+                    </v-flex>
+                    <v-flex xs12 xm6 class="car-box"  text-xs-center text-sm-center hidden-md-and-down>                       
+                        <!-- <div class="mask">
+                            <img src="../assets/road.png" class="road">
+                        </div> -->
+                        <!-- <v-flex class="btn-wrap"> -->
+                            <button @click="show">
+                               <img src="../assets/btn.png" class="btn">
+                            </button>
+                        <!-- </v-flex> -->
+                        <!-- <v-flex class="car-wrap"> -->
+                        <!-- <transition enter-active-class="animated bounceInLeft"> -->
+                            <transition name="move">
+                              <img src="../assets/car.png" class="car" v-show="isShow">
+                            </transition>    
+                        <!-- </transition>   -->
+                        <!-- </v-flex> -->
                     </v-flex>
                 </v-layout>
                 <v-layout class="part-two">
                     <v-flex xs12 sm3 class="left">
-                        <img src="../assets/pic.jpg" style="width:256px;height:416px;display:block">
+                        <!-- <img src="../assets/pic.jpg" style="width:256px;height:416px;display:block"> -->
                     </v-flex>
                     <v-flex xs12 sm5 class="center" text-xs-left>
                         <v-card class="shop">
@@ -279,7 +292,8 @@ export default {
  
   methods: {
     show: function() {
-      this.isShow = !this.isShow;
+    //   this.isShow = !this.isShow;
+        this.isShow = true;
     }
   }
 };
@@ -288,28 +302,31 @@ export default {
 /* p {
     width:100px;
     height:100px;
-}
+}*/
 .move-enter-active,.move-leave-active {
     transition:1s all ease;
 }
-.car {
-    transform:tanslate(-100px);
+/* .car {
+    transform:tanslate(-300px);
 } */
-/* .move-enter {
+.move-enter {
     opacity: 0;
     transform:tanslate(0px);
 }
 .move-enter-to {
     opacity:1;
-    transform:translate(-100px);
+    transform:translate(-1000px);
 }
 .move-leave {
     opacity:1;
-    transform:translate(-100px);
+    transform:translate(-1000px);
 }
 .move-leave-to {
     opacity:1;
     transform:translate(0px);
+}
+/* @media screen {
+    
 } */
 #body {
   /* margin-top:100px; */
@@ -317,34 +334,43 @@ export default {
   height: 100%;
   /* background-color: pink; */
   box-shadow: none;
-  /* background: url(../assets/whole1.jpg) no-repeat;
-  background-size: cover; */
+  background: url(../assets/body-bg.jpg) no-repeat 180px 0px;
+  background-size: cover;
 }
 #body .car-box  .road {
     width: 75%;  
-
     opacity:.5;
 }
-#body .indigo.lighten-1 {
+/* #body .indigo.lighten-1 {
   background-color: #fff !important;
   padding-left: 100px;
+} */
+#body .body-left {
+  padding-left: 100px;
 }
-#body .indigo > .white--text {
+#body .body-left > .white--text {
   color: black !important;
-  margin-bottom: 15px;
+  margin-bottom: 10px;
   font-weight: bold;
   font-size: 24px;
 }
-#body .indigo.lighten-1 > .text-top {
+/* #body .indigo.lighten-1 > .text-top {
   margin-top: 114px;
+} */
+#body .body-left > .text-top {
+    margin-top:114px;
 }
-#body .indigo > .white--text > .bee-color {
+/* #body .indigo > .white--text > .bee-color {
   color: #f69721;
+} */
+#body .body-left > .white--text > .bee-color {
+    color:#f69721;
 }
 #body .car-box {
   position: relative;
   /* margin-left: 316px; */
 }
+
 #body .car-box > .mask {
   /* position:absolute; */
   margin-top:15px;
@@ -354,31 +380,29 @@ export default {
   /* background-color:#ccc; */
   /* opacity:.5; */
   background:url(../assets/bubble.png) no-repeat 145px -5px;
-  overflow: hidden;
-  border-top-left-radius:20em;
+  /* overflow: hidden; */
+  /* border-top-left-radius:20em; */
 }
-#body .car-box > .btn {
-  position:absolute;
-  top:261px;
-  left:300px;
+#body .car-box .btn {
   width:100px;
+  position: absolute;
+  top:205px;
+  right:44px;
 }
-#body .car-box > .car {
+#body .car-box .car {
   width: 308px;
   height: 219px;
   position: absolute;
-  bottom: 117px;
-  left: 60px;
+  bottom:-260px;
+  left:129px;
 }
 #body .part-two {
-    /* margin-top:265px; */
-    position: absolute;
-    top: 680px;
-    z-index: 4;
+    margin-top:155px;
+   
 }
 #body .part-two > .left {
     padding-top:76px;
-    /* background:url(../assets/whole.png) no-repeat 0px -200px; */
+    background:url(../assets/pic1-01.png) no-repeat -65px 0px;
 }
 #body .part-two > .center {
     padding-top:76px;

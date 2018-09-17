@@ -18,7 +18,7 @@
     <v-spacer></v-spacer>
     <v-flex xs12 sm6 md3>
         <v-card class="card-title">
-            <v-card-text class="title">find car in</v-card-text>
+            <v-card-text class="title">pick up</v-card-text>
         </v-card>
       <v-dialog
         ref="dialog2"
@@ -44,7 +44,7 @@
     </v-flex>
     <v-flex xs12 sm6 md3>
       <v-card class="card-title">
-         <v-card-text class="title">find car in</v-card-text>
+         <v-card-text class="title">drop off</v-card-text>
       </v-card>
       <v-dialog
         ref="dialog3"

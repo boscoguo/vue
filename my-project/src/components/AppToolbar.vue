@@ -10,10 +10,10 @@
           </v-toolbar-items>
           
           <v-toolbar-items class="hidden-sm-and-down">
-            <v-btn flat class="aver">FIND A CAR</v-btn>
-            <v-btn flat class="aver">JOIN YOUR CAR</v-btn>
-            <v-btn flat class="aver">SUPPORT</v-btn>
-            <v-btn flat class="aver">CONTACT</v-btn>
+            <v-btn flat class="aver"><a href="http://www.google.com" style="text-decoration:none;color:black">FIND A CAR</a></v-btn>
+            <v-btn flat class="aver"><a href="http://www.google.com" style="text-decoration:none;color:black">JOIN YOUR CAR</a></v-btn>
+            <v-btn flat class="aver"><a href="http://www.google.com" style="text-decoration:none;color:black">SUPPORT</a></v-btn>
+            <v-btn flat class="aver"><a href="http://www.google.com" style="text-decoration:none;color:black">CONTACT</a></v-btn>
             <!-- <v-btn flat class="login">LOG IN</v-btn>
             <v-btn flat class="join">JOIN</v-btn> -->
           </v-toolbar-items>

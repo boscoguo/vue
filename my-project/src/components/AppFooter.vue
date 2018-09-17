@@ -59,9 +59,6 @@ export default {
   }
 </script>
 <style>
-#footer {
-  margin-top:425px;
-}
 #footer > .indigo.lighten-1 {
   background-color: #F69721!important;
   padding-top:45px;
